@@ -2,10 +2,15 @@
   "name": "nestjs-woodcutter",
   "version": "0.0.1",
   "description": "NestJS module for the Woodcutter log package.",
-  "author": "Olivier Schweitzer",
+  "author": "Olivier Schweitzer <olivier.sch68@gmail.com> (https://www.oschweitzer.dev/)",
   "license": "MIT",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oschweitzer/nestjs-woodcutter"
+  },
+  "keywords": ["typescript", "nestjs", "woodcutter", "nodejs"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
