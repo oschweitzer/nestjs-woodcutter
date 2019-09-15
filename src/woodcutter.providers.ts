@@ -30,15 +30,15 @@ class WoodCutterLogger implements LoggerService {
   }
 }
 
-export function createWoodcutterProviders(loggerOptions): Provider[] {
+export function createWoodcutterProviders(loggerOptions?): Provider[] {
   return [
     {
       provide: LOGGER_OPTIONS,
-      useValue: loggerOptions,
+      useValue: loggerOptions ? loggerOptions : {},
     },
     {
       provide: WOODCUTTER_PROVIDER,
-      useFactory: (options: ConfigurationInterface) => {
+      useFactory: (options?: ConfigurationInterface) => {
         return new WoodCutter(options);
       },
       inject: [LOGGER_OPTIONS],

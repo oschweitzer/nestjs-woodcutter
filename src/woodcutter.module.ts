@@ -5,7 +5,7 @@ import { createWoodcutterProviders } from './woodcutter.providers';
 @Global()
 @Module({})
 export class WoodcutterModule {
-  static forRoot(loggerOptions: ConfigurationInterface): DynamicModule {
+  static forRoot(loggerOptions?: ConfigurationInterface): DynamicModule {
     const providers = createWoodcutterProviders(loggerOptions);
     return {
       module: WoodcutterModule,
