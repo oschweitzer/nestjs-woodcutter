@@ -1,6 +1,5 @@
 import { LoggerService, Provider } from '@nestjs/common';
-import { WoodCutter } from 'woodcutter';
-import { ConfigurationInterface } from 'woodcutter/dist/lib/interfaces/configuration.interface';
+import { ConfigurationInterface, WoodCutter } from 'woodcutter';
 import {
   LOGGER_OPTIONS,
   WOODCUTTER_NEST_PROVIDER,

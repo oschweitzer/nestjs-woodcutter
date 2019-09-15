@@ -14,7 +14,7 @@ A [Nest](https://nestjs.com/) module wrapper for [woodcutter](https://www.npmjs.
 ## Installation
 
 ```bash
-$ npm install -S nestjs-woodcutter
+$ npm install -S nestjs-woodcutter woodcutter
 ```
 
 ## Usage
@@ -24,12 +24,13 @@ Import `WoodcutterModule` into the root `AppModule` and use the `forRoot` method
 ```typescript
 import { Module } from '@nestjs/common';
 import { WoodcutterModule } from 'nestjs-woodcutter';
+import { LogLevel } from 'woodcutter';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
   imports: [WoodcutterModule.forRoot({
-    level: 'info',
+    level: LogLevel.INFO,
     timestampFormat: 'YYYY-MM-DD HH:mm:ss'
   })],
   controllers: [AppController],
@@ -42,7 +43,7 @@ Then in your `bootstrap` function:
 
 ```typescript
 import { NestFactory } from '@nestjs/core';
-import { WOODCUTTER_NEST_PROVIDER } from 'nestjs-woodcutter/dist/woodcutter.constants';
+import { WOODCUTTER_NEST_PROVIDER } from 'nestjs-woodcutter';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
