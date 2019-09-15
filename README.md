@@ -70,13 +70,17 @@ export class AppController {
   @Get()
   getHello(): string {
     this.logger.debug('Hello controller', this.getHello.name);
-    this.logger.error('Cannot say hello',
-      new Error('Something went wrong').stack);
-
+    this.logger.error('Cannot say hello');
+    this.logger.verbose('Verbose message');
+    this.logger.warn('This is a warning');
     return this.appService.getHello();
   }
 }
 ```
+
+Console output:
+
+![woodcutter logs screenshot](assets/woodcutter_logs.png)
 
 ## Stay in touch
 
